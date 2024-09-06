@@ -21,7 +21,9 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         bio: user?.profile?.bio || '',
         skills: user?.profile?.skills?.map((skill) => skill) || '',
         file: user?.profile?.resume || '',
+        profilePicture: user?.profile?.profilePhoto || '', // New state for profile picture
     });
+
     const dispatch = useDispatch();
 
     const changeEventHandler = (e) => {
@@ -30,7 +32,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
 
     const fileChangeHandler = (e) => {
         const file = e.target.files?.[0];
-        setInput({ ...input, file });
+        setInput({ ...input, [e.target.name]: file });
     };
 
     const submitHandler = async (e) => {
@@ -43,6 +45,9 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         formData.append('skills', input.skills);
         if (input.file) {
             formData.append('file', input.file);
+        }
+        if (input.profilePicture) {
+            formData.append('profilePicture', input.profilePicture); // Append profile picture to form data
         }
         try {
             setLoading(true);
@@ -152,6 +157,20 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
                                     name="file"
                                     type="file"
                                     accept="application/pdf"
+                                    onChange={fileChangeHandler}
+                                    className="col-span-3"
+                                />
+                            </div>
+                            {/* Profile Picture */}
+                            <div className="grid grid-cols-4 items-center gap-4">
+                                <Label htmlFor="profilePicture" className="w-full text-right">
+                                    Profile Picture
+                                </Label>
+                                <Input
+                                    id="profilePicture"
+                                    name="profilePicture"
+                                    type="file"
+                                    accept="image/*"
                                     onChange={fileChangeHandler}
                                     className="col-span-3"
                                 />
