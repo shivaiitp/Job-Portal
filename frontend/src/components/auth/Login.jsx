@@ -110,7 +110,7 @@ const Login = () => {
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />
-                                <Label htmlFor="r2" className="cursor-pointer" onClick={changeEventHandler} >Recruiter</Label>
+                                <button htmlFor="r2" className="cursor-pointer" onClick={changeEventHandler} >Recruiter</button>
                             </div>
                         </RadioGroup>
                     </div>
