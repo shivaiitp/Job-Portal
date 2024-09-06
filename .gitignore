@@ -1,2 +1,34 @@
-node_modules
+# Node.js dependencies
+node_modules/
+
+# Build output for React
+build/
+dist/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
 .env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Express
+*.log
+
+# MongoDB
+data/
+
+# OS-specific files
+*.swp
+*.swo
