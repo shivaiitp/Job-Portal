@@ -110,12 +110,12 @@ const Login = () => {
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />
-                                <Label htmlFor="r2">Recruiter</Label>
+                                <Label htmlFor="r2" className="cursor-pointer" onClick={changeEventHandler} >Recruiter</Label>
                             </div>
                         </RadioGroup>
                     </div>
                     {
-                        loading ? <Button className="w-full my-4"> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait </Button> : <Button type="submit" className="w-full my-4">Login</Button>
+                        loading ? <Button className="w-full my-4"> <Loader2 className='bg-gray-600 cursor-not-allowed mr-2 h-4 w-4 animate-spin' /> Please wait... </Button> : <Button type="submit" className="w-full my-4">Login</Button>
                     }
                     <span className='text-sm'>Don't have an account? <Link to="/signup" className='text-blue-600'>Signup</Link></span>
                 </form>
