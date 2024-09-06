@@ -99,10 +99,10 @@ const Login = () => {
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />
-                                <Label htmlFor="r1">Student</Label>
+                                <Label htmlFor="r2" >Student</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <Input
+                                <i
                                     type="radio"
                                     name="role"
                                     value="recruiter"
@@ -110,7 +110,8 @@ const Login = () => {
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
                                 />
-                                <button htmlFor="r2" className="cursor-pointer" onClick={changeEventHandler} >Recruiter</button>
+                                <Label htmlFor="r2" >Recruiter</Label>
+
                             </div>
                         </RadioGroup>
                     </div>

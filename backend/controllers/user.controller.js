@@ -190,7 +190,7 @@ export const updateProfile = async (req, res) => {
         if (bio) user.profile.bio = bio;
         if (skills) user.profile.skills = skillsArray;
 
-        // Resume comes later here...
+        // Resume 
         if (cloudResponse) {
             user.profile.resume = cloudResponse.secure_url; // Save the cloudinary URL
             user.profile.resumeOriginalName = file.originalname; // Save the original file name
