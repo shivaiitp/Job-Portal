@@ -68,7 +68,7 @@ const Navbar = () => {
                         <Popover>
                             <PopoverTrigger asChild>
                                 <div className="flex items-center cursor-pointer ">
-                                    <Avatar className="border-2 p-1">
+                                    <Avatar className="cursor-pointer">
                                         <AvatarImage src={user?.profile?.profilePhoto} alt={user?.fullname} />
                                     </Avatar>
                                     <ChevronDown className="ml-2" size={16} /> {/* Dropdown icon */}
@@ -77,7 +77,7 @@ const Navbar = () => {
                             <PopoverContent className="w-80">
                                 <div>
                                     <div className='flex gap-2 space-y-2'>
-                                        <Avatar className="cursor-pointer">
+                                     <Avatar className="cursor-pointer">
                                             <AvatarImage src={user?.profile?.profilePhoto} alt={user?.fullname} />
                                         </Avatar>
                                         <div>
