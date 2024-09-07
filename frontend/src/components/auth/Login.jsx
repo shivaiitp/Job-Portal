@@ -102,7 +102,7 @@ const Login = () => {
                                 <Label htmlFor="r2" >Student</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <i
+                                <input
                                     type="radio"
                                     name="role"
                                     value="recruiter"
